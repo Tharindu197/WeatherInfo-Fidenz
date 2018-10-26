@@ -11,7 +11,7 @@ Features:
 ![Optional Text](../master/images/1.png)
 
   * Shows Weather data for selected city.
-![Optional Text](../master/images/1.png)
+![Optional Text](../master/images/2.png)
 
   * Mobile Responsive.
 ![Optional Text](../master/images/Untitled.png)
