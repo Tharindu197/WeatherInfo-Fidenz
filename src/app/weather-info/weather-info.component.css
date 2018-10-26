@@ -1,0 +1,48 @@
+
+a{
+	text-decoration: none;
+
+}
+
+#content{
+    text-align: center;
+}
+
+#detail_pane{
+    background-color: #bbdefb;
+    border-radius: 30px;
+    margin: 0 10px 0 10px;
+    min-width: 250px;
+}
+
+#small_info_box{
+    min-width: 100px;
+    margin-top: 20px;
+    border-right:1px solid #000;
+}
+
+.body{
+  font-family:"Trebuchet MS", Helvetica, sans-serif;
+}
+
+.container{
+    width: 100%;
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+        #devider{
+            height: 20px;
+        }
+        #small_info_box{
+            min-width: 100px;
+            margin-top: 20px;
+            border-right:0;
+            border-bottom:1px solid #000;
+        }
+  }

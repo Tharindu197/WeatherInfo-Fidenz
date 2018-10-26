@@ -1,0 +1,51 @@
+<div class="container">
+
+    <nav id="nav" class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#"><b>WeatherInfo Assignment</b> - Answer by Tharindu Amarasingha</a>
+      </nav>
+
+<div class="row" style="padding-top: 100px;">
+    <div class="col-sm-4">
+      <div id="content">
+        <br>
+      <h4>Select Your City</h4><br>
+      <div ngbDropdown class="d-inline-block">
+        <button class="btn btn-outline-primary" id="city_list" ngbDropdownToggle>Choose</button>
+        <div ngbDropdownMenu aria-labelledby="city_list">
+          <button *ngFor="let city of cities" (click)="getSelectedCityWeather(city)" class="dropdown-item">{{city.CityName}}</button>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div class="col-sm-1" id="devider"></div>
+    <div class="col-sm-4" id="detail_pane">
+      <br>
+      <h4>{{selectedCity.CityName}}</h4>
+      <h3><fa name="thermometer-three-quarters"></fa> {{selectedCity.temp}}&deg;C</h3>
+      <table>
+        <tr><td><b>City Code:</b></td><td style="width: 5px;"></td><td>{{selectedCity.CityCode}}</td></tr>
+        <tr><td><b>Description:</b></td><td style="width: 5px;"></td><td>{{selectedCity.desc}}</td></tr>
+      </table>
+      <br>
+  </div>
+  <div class="col-sm-2" style="padding-top: 20px;">
+      <button (click)="refreshAll()" class="btn btn-primary"><fa name="retweet"></fa></button>
+  </div>
+</div>
+<h4 style="padding-top: 100px;">Other Cities:</h4><br>
+<div class="row" id="all_city_info" >
+    <div id="small_info_box" *ngFor="let city of loadedCities" class="col-sm-2">
+      <h6><b>{{city.CityName}}</b> ({{city.CityCode}})</h6>
+      <h6><fa name="thermometer-three-quarters"></fa> {{city.temp}}&deg;C</h6>
+      <h6>{{city.desc}}</h6>
+      </div>
+</div>
+
+<div class="row" style="padding-top: 100px;">
+  <div class="col-sm-2">
+  </div>
+  <div class="col-sm-2">
+  </div>
+</div>
+
+</div>
